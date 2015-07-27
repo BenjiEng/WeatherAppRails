@@ -1,1 +1,1 @@
-[Live Link](weatherappp.herokuapp.com)
+[Live Link](http://weatherappp.herokuapp.com)
