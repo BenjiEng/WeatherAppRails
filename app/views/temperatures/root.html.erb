@@ -3,17 +3,12 @@
 
   <%=form_tag("/temperatures", method: "get") do%>
     <%=label_tag(:zip, "Search by Zipcode:")%>
-    <%=text_field_tag(:zip)%>
+    <%=number_field_tag(:zip)%>
     <%=submit_tag("Search")%>
   <%end%>
 
   <li class="temp-li">
-    <p class="sources">Open Weather:</p>
-    <p><span class="category">Location: </span><%=@name%></p>
-    <p><span class="category">Temperature: </span><%=@faren%>°F; <%=@cels%>°C</p>
     <p class="sources">Wunderground:</p>
     <p><span class="category">Location: </span><%=@name_w%></p>
-    <p><span class="category">Temperature: </span><%=@faren_w%>°F; <%=@cels_w%>°C</p>
+    <p><span class="category">Current Temperature: </span><%=@faren_w%>°F; <%=@cels_w%>°C</p>
   </li>
-
-<p class="note">*Please note the fluctuations in temperatures may be due to different barometer locations within the same zipcode.</p>
